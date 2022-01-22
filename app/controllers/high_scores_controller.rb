@@ -1,4 +1,5 @@
 class HighScoresController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_high_score, only: %i[ show edit update destroy ]
 
   # GET /high_scores or /high_scores.json
